@@ -11,9 +11,9 @@
 #===================================================================================
 
 wget https://api.github.com/repos/full-of-foo/linux/tarball/master \
-     -O linux-2.6.32.tar.gz && \
+     -O linux-2.6.32-custom.tar.gz && \
   sudo rm -fr /usr/src/linux-* && \
-  sudo mkdir /usr/src/linux-2.6.32 && \
-  sudo mv ./linux-2.6.32.tar.gz /usr/src/linux-2.6.32 && \
+  sudo mkdir /usr/src/linux-2.6.32-custom && \
+  sudo mv ./linux-2.6.32-custom.tar.gz /usr/src && \
   cd /usr/src && \
-  tar -xzvf linux-2.6.32.tar.gz -C linux-2.6.32 --strip-components 1
+  sudo tar -xzvf linux-2.6.32-custom.tar.gz -C linux-2.6.32-custom --strip-components 1
