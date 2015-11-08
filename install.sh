@@ -13,4 +13,4 @@ cd ~/linux/linux-2.6.32 && \
   rm -f ./config && \
   cp /boot/config-`uname -r` ./.config && \
   yes "" | make ARCH=x86 oldconfig && \
-  make ARCH=x86
+  make ARCH=x86 -j8
