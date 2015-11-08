@@ -5,14 +5,15 @@
 #
 # USAGE: chmod +x ./bootstrap.sh && ./bootstrap.sh
 #
-# DESCRIPTION: Fetches our latest patched 2.6.18 kernel source from GH as a tarball
+# DESCRIPTION: Fetches our latest patched 2.6.32 kernel source from GH as a tarball,
+#              un-tars and -compresses the source. Then moves it to ~/linux
 
 #===================================================================================
 
 wget https://api.github.com/repos/full-of-foo/linux/tarball/master \
-     -O linux-2.6.18.tar.gz && \
+     -O linux-2.6.32.tar.gz && \
   rm -fr ~/linux && \
-  mkdir ~/linux ~/linux/linux-2.6.18 && \
-  mv ./linux-2.6.18.tar.gz ~/linux && \
+  mkdir ~/linux ~/linux/linux-2.6.32 && \
+  mv ./linux-2.6.32.tar.gz ~/linux && \
   cd ~/linux && \
-  tar -xzvf linux-2.6.18.tar.gz -C linux-2.6.18 --strip-components 1
+  tar -xzvf linux-2.6.32.tar.gz -C linux-2.6.32 --strip-components 1
